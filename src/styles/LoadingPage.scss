@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+.loading-spinner {
+  margin-top: 30vh;
+}
+
+.error-message-big {
+  margin: 6rem 1rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $base-color;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: lighter;
+
+  .error-icon {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+  }
+}

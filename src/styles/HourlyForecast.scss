@@ -1,0 +1,102 @@
+@import "./variables";
+@import "~react-alice-carousel/lib/scss/alice-carousel";
+
+.hourly-forecast-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  .panel-title {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-bottom: 1px solid $color1;
+
+    h3 {
+      padding: 1rem 0 .5rem 0;
+      margin: 0;
+    }
+  }
+
+  .hourly-spinner {
+    display: flex;
+    width: 100%;
+    transition: .5s;
+    border-bottom: 1px solid $color1;
+
+    button {
+      background: none;
+      border: none;
+      width: 50px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:hover {
+      transform: scale(1.5);
+      cursor: pointer;
+      color: $base-color;
+    }
+
+    button:disabled {
+      color: lightgray;
+    }
+
+    button:focus {
+    outline: none;
+  }
+
+    .spinner-item {
+      padding: 1rem 0 1rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      #date {
+        padding-top: .5rem;
+        font-weight: lighter;
+        font-size: .7rem;
+      }
+
+      .spinner-item-hour {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      .spinner-item-icon {
+        color: $base-color;
+        font-size: 2.5rem;
+        padding: 5px 0 5px 0;
+      }
+
+      .spinner-item-temp {
+
+      }
+    }
+
+    .spinner-item:hover {
+      background: $color1;
+      cursor: grab;
+    }
+
+    .alice-carousel {
+      width: 90%
+    }
+
+    .button {
+      width: 5%;
+    }
+  }
+
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

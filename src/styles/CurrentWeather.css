@@ -1,0 +1,207 @@
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95vw;
+}
+.weather-container .current-weather {
+  width: 100%;
+  margin: 2rem 0 1rem 0;
+}
+.weather-container .current-weather .weather-description {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0.4rem 0 0.4rem 0;
+}
+.weather-container .current-weather .city-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #FFC000;
+}
+.weather-container .current-weather .city-details .city-name {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 1rem;
+  color: #DA0033;
+}
+.weather-container .current-weather .city-details .city-name #city-country {
+  font-size: 1rem;
+  padding-left: 5px;
+  color: #FFC000;
+}
+.weather-container .current-weather .city-details .city-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weather-container .current-weather .city-details .city-time #city-hour {
+  font-size: 2rem;
+}
+.weather-container .current-weather .city-details .city-time #city-date {
+  font-weight: lighter;
+}
+.weather-container .current-weather .current-weather-wrapper {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  border-bottom: 1px solid #FFC000;
+  transition: 0.3s;
+}
+.weather-container .current-weather .current-weather-wrapper .current-weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  font-size: 5rem;
+  color: #DA0033;
+}
+.weather-container .current-weather .current-weather-wrapper .current-weather-icon i {
+  transform: translate(0, 10px);
+}
+.weather-container .current-weather .current-weather-wrapper .current-weather-temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.weather-container .current-weather .current-weather-wrapper .current-temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.weather-container .current-weather .current-weather-wrapper .current-temperature #current-temp {
+  font-size: 3rem;
+}
+.weather-container .current-weather .current-weather-wrapper .current-temperature #feels-like-temp {
+  font-weight: lighter;
+}
+.weather-container .current-weather .current-weather-wrapper .current-temperature .minmax-temperature {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0 0.5rem 0;
+}
+.weather-container .current-weather .current-weather-wrapper .current-temperature .minmax-temperature span i {
+  padding: 0 0.5rem 0 0.5rem;
+  color: #DA0033;
+}
+.weather-container .current-weather .current-weather-wrapper:hover {
+  background: #FFC000;
+}
+.weather-container .current-weather .weather-details {
+  display: flex;
+  border-bottom: 1px solid #FFC000;
+}
+.weather-container .current-weather .weather-details .details-panel {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.3rem;
+  border-right: 1px solid #FFC000;
+  color: #DA0033;
+}
+.weather-container .current-weather .weather-details .details-panel .details-desc {
+  display: none;
+}
+.weather-container .current-weather .weather-details .details-panel span {
+  padding-top: 5px;
+  font-size: 0.9rem;
+  color: black;
+  font-weight: lighter;
+}
+.weather-container .current-weather .weather-details .details-panel:hover {
+  background: #FFC000;
+}
+.weather-container .current-weather .weather-details .details-panel:last-child {
+  border-right: none;
+}
+
+@media (min-width: 768px) {
+  .weather-container {
+    width: 80vw;
+  }
+  .weather-container .current-weather {
+    margin-top: 0.5rem;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-icon {
+    font-size: 3.5rem;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-temperature {
+    flex-direction: row;
+  }
+  .weather-container .current-weather .current-weather-wrapper:hover {
+    transform: scale(1.05);
+  }
+  .weather-container .current-weather .city-details {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+  .weather-container .current-weather .city-details .city-time {
+    align-items: flex-end;
+  }
+  .weather-container .current-weather .city-details .city-time #city-hour {
+    font-size: 1.5rem;
+  }
+  .weather-container .current-weather .city-details .city-time #city-date {
+    font-size: 0.9rem;
+  }
+  .weather-container .current-weather .weather-details .details-panel {
+    transition: 0.3s;
+  }
+  .weather-container .current-weather .weather-details .details-panel .details-desc {
+    display: block;
+  }
+  .weather-container .current-weather .weather-details .details-panel:hover {
+    transform: scale(1.1);
+  }
+  .weather-container .current-weather .weather-details .details-panel:hover span {
+    font-weight: normal;
+  }
+}
+@media (min-width: 992px) {
+  .weather-container {
+    width: 80vw;
+  }
+  .weather-container .current-weather .current-weather-wrapper {
+    padding: 1rem 0 1rem 0;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-icon {
+    width: 20%;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-temperature {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-temperature .current-temperature {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-temperature .current-temperature #current-temp {
+    font-size: 3.5rem;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-temperature .current-temperature .minmax-temperature {
+    flex-direction: column;
+    width: auto;
+    padding: 0;
+  }
+  .weather-container .current-weather .current-weather-wrapper .current-weather-temperature .current-temperature .minmax-temperature span {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .weather-container {
+    width: 60vw;
+  }
+}
+
+/*# sourceMappingURL=CurrentWeather.css.map */

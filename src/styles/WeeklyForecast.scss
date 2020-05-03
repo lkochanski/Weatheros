@@ -1,0 +1,241 @@
+@import "variables";
+
+.weekly-forecast {
+  width: 100%;
+
+  h3 {
+    margin: 0;
+    padding: 1.5rem 0 .5rem 0;
+    border-bottom: 1px solid $color1;
+  }
+
+  .weekly-forecast-item {
+
+    margin: 1rem 0 0 0;
+    padding-bottom: 1rem;
+
+    .date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      background: $base-color;
+      color: white;
+      padding: .5rem 0 .5rem 0;
+      //border-radius: 1rem 1rem 0 0;
+
+      .sunrise-sunset {
+        color: $base-color;
+        padding-top: .5rem;
+
+        span {
+          font-size: 1.1rem;
+          border-right: 1px solid $color1;
+          padding-right: 1rem;
+          font-weight: lighter;
+          color: white;
+
+          i {
+            font-size: 1.2rem;
+            padding-right: 5px;
+            font-weight: lighter;
+            color: $color1;
+          }
+        }
+
+        span:last-child {
+          border-right: none;
+          padding-left: 1rem;
+        }
+      }
+    }
+
+    .weekly-forecast-weather {
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .weekly-wrapper {
+        width: 100%;
+        display: flex;
+        padding: .5rem 0 .5rem 0;
+        justify-content: space-between;
+        transition: .3s;
+
+        .weekly-forecast-icon {
+          width: 42%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: $base-color;
+          font-size: 3rem;
+          border-right: 1px solid $base-color;
+
+          span {
+            font-size: 0.9rem;
+            padding-top: .5rem;
+            color: black;
+            font-weight: lighter;
+            text-align: center;
+          }
+
+        }
+
+        .weekly-forecast-temperature {
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+
+          #main-temp {
+            font-size: 3rem;
+          }
+
+          #feels-like {
+            padding-top: .5rem;
+            font-size: 0.9rem;
+            color: black;
+            font-weight: lighter;
+          }
+
+
+        }
+
+        .weekly-forecast-minmax {
+          width: 18%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 1rem 0 1rem;
+          border-left: 1px solid $base-color;
+
+          span {
+            border-bottom: 1px solid $base-color;
+            padding: .5rem 0 .5rem 0;
+            width: 100%;
+            text-align: center;
+
+            span {
+              display: none;
+            }
+          }
+
+          span:first-child {
+            padding-top: 0;
+          }
+
+          span:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+
+          i {
+            color: $base-color;
+          }
+        }
+      }
+
+      .weekly-wrapper:hover {
+        background: $color1;
+      }
+
+
+      .weekly-forecast-details {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        .details-column {
+          display: flex;
+          justify-content: space-between;
+          padding: .5rem 0 .5rem 0;
+          border-bottom: 1px solid $color1;
+
+          span {
+            display: none;
+          }
+
+          .details-row {
+            width: 50%;
+
+            i {
+              color:$base-color;
+              padding: 0 1rem 0 1rem;
+              font-size: 1.2rem;
+            }
+
+            #wind-degree {
+            color: $light-gray;
+              font-size: 0.5rem;
+          }
+          }
+        }
+
+        .details-column:last-child {
+          border-bottom: none;
+        }
+
+        .details-column:hover {
+          background: $color1;
+        }
+      }
+    }
+  }
+
+}
+
+@media(min-width: 768px) {
+ .weekly-forecast-item {
+
+   .weekly-forecast-weather {
+
+     .weekly-wrapper:hover {
+       background: $color1;
+       color: black;
+       transform: scale(1.05);
+
+       .weekly-forecast-icon {
+         #desc {
+         color: black;
+           font-weight: normal;
+       }
+       }
+
+       .weekly-forecast-temperature {
+         #feels-like {
+           color: black;
+           font-weight: normal;
+         }
+       }
+
+     }
+
+
+     .weekly-forecast-details {
+       .details-column {
+         transition: .3s;
+         .details-row {
+           display: flex;
+
+           span {
+             display: block;
+             font-weight: lighter;
+             padding-right: 5px;
+           }
+         }
+       }
+
+       .details-column:hover {
+         transform: scale(1.05);
+         color: black;
+         font-weight: normal;
+       }
+     }
+   }
+ }
+   }

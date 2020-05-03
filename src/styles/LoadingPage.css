@@ -1,0 +1,20 @@
+.loading-spinner {
+  margin-top: 30vh;
+}
+
+.error-message-big {
+  margin: 6rem 1rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #DA0033;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: lighter;
+}
+.error-message-big .error-icon {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+}
+
+/*# sourceMappingURL=LoadingPage.css.map */

@@ -1,0 +1,158 @@
+@import "variables.scss";
+
+.topbar {
+  background-color: $base-color;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 1;
+
+  .topbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .error-message {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+
+    i {
+      font-size: 1.5rem;
+      padding-right: 10px;
+      color: $color1;
+    }
+
+    strong {
+      display: none;
+    }
+  }
+
+  .form-wrapper {
+    display: flex;
+    padding: 1rem 0 1rem 0;
+    width: 80vw;
+
+    input {
+      width: 80%;
+      font-size: 17px;
+      padding: 7px 10px 7px 10px;
+      border: 3px solid white;
+      border-right: none;
+      border-radius: 5px 0 0 5px;
+      background: $color2;
+      color: $base-color;
+      transition-duration: .5s;
+    }
+
+    .input-error {
+      background: $color3;
+      border: 3px solid $color3;
+      border-right: none;
+    }
+
+    input::placeholder {
+      color: gray;
+    }
+
+    input:focus {
+      outline: 0;
+      border: 3px solid $color1;
+      border-right: none;
+    }
+
+    button {
+      width: 20%;
+      font-size: 17px;
+      border: 1px solid $color1;
+      border-radius: 0 5px 5px 0;
+      border-left: none;
+      background: $color1;
+      color: $base-color;
+      outline: 0;
+      transition-duration: .5s;
+    }
+
+    button:hover {
+      outline: 0;
+      cursor: pointer;
+      background: $base-color;
+      border: 3px solid $color1;
+      border-left: none;
+      color: $color2;
+
+      font-size: 20px;
+    }
+
+  }
+}
+
+@media(min-width: 768px) {
+  .topbar {
+
+    .topbar-wrapper {
+      width: 80vw;
+    }
+
+    .topbar-wrapper {
+      span {
+        strong {
+          display: block;
+        }
+      }
+    }
+
+    .form-wrapper {
+      width: 50vw;
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .topbar {
+
+    .topbar-wrapper {
+      width: 80vw;
+    }
+
+    .topbar-wrapper {
+      span {
+        strong {
+          display: block;
+        }
+      }
+    }
+
+    .form-wrapper {
+      width: 40vw;
+    }
+  }
+}
+
+@media(min-width: 1200px) {
+  .topbar {
+
+    .topbar-wrapper {
+      width: 60vw;
+    }
+
+    .form-wrapper {
+      width: 25vw;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.main-content-container {
+  color: black;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .main-content-container {
+    width: 80vw;
+  }
+}
+@media (min-width: 992px) {
+  .main-content-container {
+    background-color: #ffffff;
+    color: black;
+    width: 80vw;
+    min-height: 100vh;
+    position: relative;
+  }
+}
+@media (min-width: 1200px) {
+  .main-content-container {
+    width: 60vw;
+  }
+}
+
+/*# sourceMappingURL=MainContentContainer.css.map */
